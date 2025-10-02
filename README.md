@@ -45,12 +45,13 @@ The `Phishing_QSVM_V3` notebook executes the detection task in 4 main stages:
 
 4. **Prediction and Evaluation:**
    * The trained model makes predicitons on the held-out test set (`X_test`).
-   * Standard metrics (Accuracy, recall, F1-Score) are computed using `scikit-learn` to quantify the model's performance.
+   * Standard metrics (Accuracy, recall, precision, F1-Score) are computed using `scikit-learn` to quantify the model's performance.
 ***
 ## Performance Results
 The QSVC model demonstrated exceptional performance on the held-out test set (30% of data, stratified split with `random_state=109`).
-* **Accuracy**: Score of 0.99969 (99%)
-* **Recall**: Score of 0.9997 (99%)
-* **F1-Score** Score of 1
+* **Accuracy**: Score of 0.98333 (98%)
+* **Recall**: Score of 0.98333 (98%)
+* **Precision**: Score of 0.983871 (98%)
+* **F1-Score** Score of 0.9833287 (98%)
 
 *Note: The near-perfect accuracy suggests that the quantum kernel successfully mapped the phishing data into a high-dimensional space where the classes became highly seperable, offering a compelling result for QML application in cybersecurity.*
