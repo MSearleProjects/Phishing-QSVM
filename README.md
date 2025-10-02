@@ -28,6 +28,7 @@ The workflow is contained within the `Phishing_QSVM_V3.ipynb` notebook and requi
 * **Jupyter**: A Jupyter Notebook environment (Lab or classic).
 
 **Code Explained**
+
 The `Phishing_QSVM_V3` notebook executes the detection task in 4 main stages:
 1. **Data Loading and Preprocessing:**
    * The `phishing_data.csv` file is loaded into a Pandas DataFrame.
