@@ -35,5 +35,16 @@ The `Phishing_QSVM_V3` notebook executes the detection task in 4 main stages:
    * The dataset is split into 70% training and 30% testing subsets, using stratified sampling to maintain class balance (`random_state=109`).
    * All 11 features are scaled using a `MinMaxScaler` to the range **(-1, 1)**, which is the required input range for the quantum feature map.
 
-2. *Quantum Kernel Definition:
-   
+2. **Quantum Kernel Definition:**
+   * A `ZZFeatureMap` is instantiated using 11 qubits and 2 repetitions. This map encodes the classical feature vector x into a quantum state ∣ψ(x)⟩ through a series of Hadamard, rotation (Rz​), and controlled-Z (CZ) gates.
+   * A `FidelityQuantumKernel` is created using the feature map. This kernel calculates the similarity between the 2 encoded quantum states, ∣ψ(xi​)⟩ and ∣ψ(xj​)⟩, which serves as the core of the quantum classification model.
+
+3. **Model Training (QSVC):**
+   * The **QSVC** is initialised using the defined quantum kernel.
+   * The model is trained by calling `qsvc.fit(X_train, y_train)`. During this stage, the simulator calculates the training kernel matrix K, where Kij​=∣⟨ψ(xi​)∣ψ(xj​)⟩∣2. This matrix is then used by the classical SVM solver to find the optimal seperating hyperplane.
+
+4. **Prediction and Evaluation:**
+   * The trained model makes predicitons on the held-out test set (`X_test`).
+   * Standard metrics (Accuracy, recall, F1-Score) are computed using `scikit-learn` to quantify the model's performance.
+***
+## Performance Results
