@@ -21,3 +21,19 @@ The classification is performed using a quantum kernel made from the following c
 * **Training Backend**: Qiskit Aer Qasm Simulator
 ***
 ## Walkthrough
+The workflow is contained within the `Phishing_QSVM_V3.ipynb` notebook and requires the data file `phishing_data.csv` to be present.
+
+**Prerequisites**
+* **Python**: Version 3.9 or higher.
+* **Jupyter**: A Jupyter Notebook environment (Lab or classic).
+
+**Code Explained**
+The `Phishing_QSVM_V3` notebook executes the detection task in 4 main stages:
+1. **Data Loading and Preprocessing:**
+   * The `phishing_data.csv` file is loaded into a Pandas DataFrame.
+   * The features and the target variable (`status`) are seperated. The categorical status column is converted to numerical labels (`0` for legitimate, `1` for phish).
+   * The dataset is split into 70% training and 30% testing subsets, using stratified sampling to maintain class balance (`random_state=109`).
+   * All 11 features are scaled using a `MinMaxScaler` to the range **(-1, 1)**, which is the required input range for the quantum feature map.
+
+2. *Quantum Kernel Definition:
+   
