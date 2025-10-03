@@ -13,6 +13,7 @@ This section details the specific QML approach and the technology stack used to 
 * **Execution Environment**: Jupyter Notebook (`Phishing_QSVM_V3.ipynb`)
 
 **Quantum Compenents**
+
 The classification is performed using a quantum kernel made from the following circuit structure:
 * **Feature Map**: `ZZFeatureMap`
 * **Input Dimension**: 11 Qubits (one per feature)
