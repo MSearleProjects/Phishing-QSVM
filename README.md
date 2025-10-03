@@ -37,7 +37,7 @@ The `Phishing_QSVM_V3` notebook executes the detection task in 4 main stages:
    * All 11 features are scaled using a `MinMaxScaler` to the range **(-1, 1)**, which is the required input range for the quantum feature map.
 
 2. **Quantum Kernel Definition:**
-   * A `ZZFeatureMap` is instantiated using 11 qubits and 2 repetitions. This map encodes the classical feature vector $\mathbf{x}$ into a quantum state ∣ψ(x)⟩ through a series of Hadamard, rotation (Rz​), and controlled-Z (CZ) gates.
+   * A `ZZFeatureMap` is instantiated using 11 qubits and 2 repetitions. This map encodes the classical feature vector $\mathbf{x}$ into a quantum state $|\psi(\mathbf{x})\rangle$ through a series of Hadamard, rotation ($R_z$​), and controlled-Z ($CZ$) gates.
    * A `FidelityQuantumKernel` is created using the feature map. This kernel calculates the similarity between the 2 encoded quantum states, ∣ψ(xi​)⟩ and ∣ψ(xj​)⟩, which serves as the core of the quantum classification model.
 
 3. **Model Training (QSVC):**
