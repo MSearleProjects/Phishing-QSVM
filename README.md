@@ -42,7 +42,7 @@ The `Phishing_QSVM_V3` notebook executes the detection task in 4 main stages:
 
 3. **Model Training (QSVC):**
    * The **QSVC** is initialised using the defined quantum kernel.
-   * The model is trained by calling `qsvc.fit(X_train, y_train)`. During this stage, the simulator calculates the training kernel matrix K, where Kij​=∣⟨ψ(xi​)∣ψ(xj​)⟩∣2. This matrix is then used by the classical SVM solver to find the optimal seperating hyperplane.
+   * The model is trained by calling `qsvc.fit(X_train, y_train)`. During this stage, the simulator calculates the training kernel matrix $\mathbf{K}$, where $K_{ij} = |\langle\psi(\mathbf{x}_i)|\psi(\mathbf{x}_j)\rangle|^2$. This matrix is then used by the classical SVM solver to find the optimal seperating hyperplane.
 
 4. **Prediction and Evaluation:**
    * The trained model makes predicitons on the held-out test set (`X_test`).
