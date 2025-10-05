@@ -12,7 +12,7 @@ This section details the specific QML approach and the technology stack used to 
 * **Data Science**: Pandas, NumPy, Scikit-learn.
 * **Execution Environment**: Jupyter Notebook (`Phishing_QSVM_V3.ipynb`)
 
-**Quantum Compenents**
+**Quantum Components**
 
 The classification is performed using a quantum kernel made from the following circuit structure:
 * **Feature Map**: `ZZFeatureMap`
@@ -59,4 +59,4 @@ The QSVC model demonstrated exceptional performance on the held-out test set (30
 *Note: The near-perfect accuracy suggests that the quantum kernel successfully mapped the phishing data into a high-dimensional space where the classes became highly seperable, offering a compelling result for QML application in cybersecurity.*
 ***
 ## Conclusion
-This project validated the potential of the Quantum Support Vector Classifier for highly accurate phishing URL detection. Achieving such a high score on all metrics on the test set demonstrates that the quantum-enhanced feature mapping effectively seperates complex, non-linear patterns within the URL feature data. This provides strong evidence that Quantum Machine Learning, even when simulated on classical hardware, offers a powerful alternative to classical detection mehtods for critical cybersecurity tasks. The use of `ZZFeatureMap` proved to be a robust method for kernel generation, leading to results that surpass many traditional machine learning benchmarks.
+This project validated the potential of the Quantum Support Vector Classifier for highly accurate phishing URL detection. Achieving such a high score on all metrics on the test set demonstrates that the quantum-enhanced feature mapping effectively seperates complex, non-linear patterns within the URL feature data. This provides strong evidence that Quantum Machine Learning, even when simulated on classical hardware, offers a powerful alternative to classical detection methods for critical cybersecurity tasks. The use of `ZZFeatureMap` proved to be a robust method for kernel generation, leading to results that surpass many traditional machine learning benchmarks.
